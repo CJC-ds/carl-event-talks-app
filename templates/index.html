@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BigQuery Release Notes Hub</title>
+    <!-- Google Fonts for premium appearance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <h1>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent);">
+                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                    </svg>
+                    BigQuery Update Hub
+                </h1>
+                <p>Stay up to date with Google BigQuery changes</p>
+            </div>
+            <div class="actions">
+                <span id="last-updated" class="feed-status">Syncing...</span>
+                <button id="refresh-btn" class="btn-refresh">
+                    <span id="spinner" class="spinner"></span>
+                    Refresh Feed
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="feed-title-container">
+            <h2>BigQuery Release Notes</h2>
+            <div id="error-message"></div>
+        </div>
+
+        <div id="notes-list" class="notes-list">
+            <!-- Dynamic release notes cards will be injected here -->
+            <p>Loading updates...</p>
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
